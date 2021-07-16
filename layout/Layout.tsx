@@ -2,11 +2,10 @@ import { LayoutProps } from './Layout.props';
 import styles from './Layout.module.css';
 import cn from 'classnames';
 import { Header } from './Header/Header';
+import React, { FunctionComponent } from 'react';
 import { Sidebar } from './Sidebar/Sidebar';
 import { Footer } from './Footer/Footer';
-import { FunctionComponent } from 'react';
 import { AppContextProvider, IAppContext } from '../context/app.context';
-
 
 const Layout = ({ children }: LayoutProps): JSX.Element => {
     return (
@@ -26,7 +25,7 @@ export const withLayout = <T extends Record<string, unknown> & IAppContext>(Comp
         return (
             <AppContextProvider menu={props.menu} firstCategory={props.firstCategory}>
                 <Layout>
-                    <Component{...props} />
+                    <Component {...props} />
                 </Layout>
             </AppContextProvider>
         );
