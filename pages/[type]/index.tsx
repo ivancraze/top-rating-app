@@ -6,11 +6,11 @@ import { MenuItem } from '../../interfaces/menu.interface';
 import { firstLevelMenu } from '../../helpers/helpers';
 import { ParsedUrlQuery } from 'querystring';
 
-function Type({ firstCategory }:TypeProps): JSX.Element {
+function Type({ firstCategory }: TypeProps): JSX.Element {
 
     return (
         <>
-            Type: { firstCategory }
+            Type: {firstCategory}
         </>
     );
 }
